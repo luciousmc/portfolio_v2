@@ -10,7 +10,7 @@ function Header() {
       </div>
       <div>
         <nav>
-          <ul className='flex mr-5 space-x-8'>
+          <ul className='hidden md:flex mr-5 space-x-8'>
             <li>
               <Link href="/">
                 <a className='navLink'>&lt;Home /&gt;</a>
@@ -36,7 +36,7 @@ function Header() {
       </div>
       <div>
         <Link href='#'>
-          <a className='text-neon border-2 py-2 px-3 border-neon rounded-md transition-colors duration-300 hover:bg-neon-tint'>
+          <a className='hidden md:inline text-neon border-2 py-2 px-3 border-neon rounded-md transition-colors duration-300 hover:bg-neon-tint'>
             Resume
           </a>
         </Link>

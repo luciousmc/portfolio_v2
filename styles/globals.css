@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply bg-base text-white font-mono;
+    font-family: sans-serif;
   }
 }
 

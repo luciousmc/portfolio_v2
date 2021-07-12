@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Header from '@components/Header';
+import HeroSection from '@components/HeroSection';
+import Section from '@components/Section';
 
 export default function Home() {
   return (
@@ -11,6 +13,20 @@ export default function Home() {
       </Head>
       
       <Header />
+
+      <main className='w-full px-8'>
+        {/* Hero Section */}
+        <HeroSection />
+
+        {/* About Section */}
+        <Section title='About' />
+
+        {/* Projects Section */}
+        <Section title ='Projects' />
+
+        {/* Contact Section */}
+        <Section title='Contact' />
+      </main>
     </>
   ) 
 }
