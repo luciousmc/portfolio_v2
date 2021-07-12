@@ -1,8 +1,8 @@
-function Section({ title, children }) {
+function Section({ id, title, children }) {
   return (
-    <section className='w-full min-h-screen'>
+    <section id={id} className='w-full min-h-screen pt-24'>
       <div className='flex items-center space-x-4'>
-        <h2 className='flex-grow whitespace-nowrap text-2xl'>{title}</h2>
+        <h2 className='flex-grow text-3xl'>{title}</h2>
         <div className='h-1 bg-green-100 w-full' />
       </div>
 

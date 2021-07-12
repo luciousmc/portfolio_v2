@@ -12,7 +12,7 @@ function Header() {
         <nav>
           <ul className='hidden md:flex mr-5 space-x-8'>
             <li>
-              <Link href="/">
+              <Link href="#top">
                 <a className='navLink'>&lt;Home /&gt;</a>
               </Link>
             </li>

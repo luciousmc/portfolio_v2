@@ -15,20 +15,19 @@ export default function Home() {
       <Header />
 
       <main className='w-full px-8'>
-        {/* Hero Section */}
-        <HeroSection />
 
-        {/* About Section */}
-        <div className="flex flex-col justify-center items-center w-3/4 mx-auto">
-          <Section title='About'>
+        <div className="flex flex-col w-2/3 mx-auto">
+          <HeroSection />
+
+          <Section id='About' title='About'>
             <h3>This is the about Section</h3>
           </Section>
-          {/* Projects Section */}
-          <Section title ='Projects'>
+
+          <Section id='Projects' title ='Projects'>
             <h3>This is the Project Section</h3>
           </Section>
-          {/* Contact Section */}
-          <Section title='Contact'>
+          
+          <Section id='Contact' title='Contact'>
             This is the contact section
           </Section>
         </div>
