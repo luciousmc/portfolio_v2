@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Header() {
   return (
-    <header className='fixed h-20 w-full flex items-center justify-between px-10 py-5 shadow-lg'>
+    <header className='bg-base fixed h-20 w-full flex items-center justify-between px-10 py-5 shadow-lg'>
       <div className='flex-grow'>
         {/* Title */}
         <h1 className='font-medium'>Brotahman</h1>

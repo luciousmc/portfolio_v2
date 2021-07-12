@@ -19,13 +19,19 @@ export default function Home() {
         <HeroSection />
 
         {/* About Section */}
-        <Section title='About' />
+        <Section title='About'>
+          <h3>This is the about Section</h3>
+        </Section>
 
         {/* Projects Section */}
-        <Section title ='Projects' />
+        <Section title ='Projects'>
+          <h3>This is the Project Section</h3>
+        </Section>
 
         {/* Contact Section */}
-        <Section title='Contact' />
+        <Section title='Contact'>
+          This is the contact section
+        </Section>
       </main>
     </>
   ) 
