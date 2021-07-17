@@ -8,9 +8,18 @@ function SocialBox() {
       <Link href="https://www.facebook.com/marlon.lucious/">
         <Facebook className='social-icon' />
       </Link>
-      <Linkedin className='social-icon' />
-      <Twitter className='social-icon' />
-      <MailIcon className='social-icon' />
+
+      <Link href='https://www.linkedin.com/in/marlonclay/'>
+        <Linkedin className='social-icon' />
+      </Link>
+      
+      <Link href='#'>
+        <Twitter className='social-icon' />
+      </Link>
+      
+      <Link href='mailto:luciousmc@icloud.com'>
+        <MailIcon className='social-icon' />
+      </Link>
     </aside>
   )
 }
