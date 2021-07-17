@@ -20,6 +20,8 @@ function SocialBox() {
       <Link href='mailto:luciousmc@icloud.com'>
         <MailIcon className='social-icon' />
       </Link>
+
+      <div className='border-l border-r border-neon h-24 w-0 mx-auto bg-neon' />
     </aside>
   )
 }
