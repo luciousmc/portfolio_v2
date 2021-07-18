@@ -13,4 +13,8 @@
   .navLink {
     @apply text-white transition-colors duration-100 hover:text-neon;
   }
+
+  .social-icon {
+    @apply m-3 w-9 h-9 cursor-pointer hover:text-neon;
+  }
 }
