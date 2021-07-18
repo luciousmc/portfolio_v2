@@ -16,16 +16,19 @@ function Header() {
                 <a className='navLink'>&lt;Home /&gt;</a>
               </Link>
             </li>
+
             <li>
               <Link href="#About">
                 <a className='navLink'>&lt;About /&gt;</a>
               </Link>
             </li>
+            
             <li>
               <Link href="#Projects">
                 <a className='navLink'>&lt;Projects /&gt;</a>
               </Link>
             </li>
+            
             <li>
               <Link href="#Contact">
                 <a className='navLink'>&lt;Contact /&gt;</a>
