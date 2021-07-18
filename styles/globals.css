@@ -17,4 +17,29 @@
   .social-icon {
     @apply m-3 w-9 h-9 cursor-pointer hover:text-neon;
   }
+
+  .logo {
+    @apply relative inline-block border-neon px-3 whitespace-nowrap text-center;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+  .logo::before {
+    @apply absolute left-0 px-1 border-8 border-neon;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(45deg);
+  }
+  .logo::after {
+    @apply absolute right-0 top-0 px-1 border-8 border-neon;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-45deg);
+  }
+
 }
