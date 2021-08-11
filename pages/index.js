@@ -3,6 +3,7 @@ import Header from '@components/Header';
 import HeroSection from '@components/HeroSection';
 import Section from '@components/Section';
 import SocialBox from '@components/SocialBox';
+import AboutSection from '@components/AboutSection';
 
 export default function Home() {
   return (
@@ -15,15 +16,15 @@ export default function Home() {
       
       <Header />
 
-      <main className='w-full px-8'>
+      <main className='max-w-7xl px-8 mx-auto'>
 
-        <div className="flex flex-col w-3/4 lg:w-2/3 mx-auto">
+        <div className="flex flex-col w-[85%] mx-auto">
           <HeroSection />
 
           <SocialBox />
 
           <Section id='About' title='About'>
-            <h3>This is the about Section</h3>
+            <AboutSection />
           </Section>
 
           <Section id='Projects' title ='Projects'>
