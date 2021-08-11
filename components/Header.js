@@ -6,7 +6,6 @@ function Header() {
     <header className='bg-base fixed z-50 h-20 w-full flex items-center justify-between px-10 py-5 shadow-lg'>
       <div className='flex-grow'>
         {/* Title */}
-        {/* <h1 className='font-medium'>Brotahman</h1> */}
         <Logo />
       </div>
       <div>
