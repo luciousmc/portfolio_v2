@@ -8,7 +8,7 @@ function ProfileImage() {
         layout='fill'
         className='filter backdrop-brightness-75 rounded-lg'
       />
-      <div className='absolute w-full h-full rounded-lg cursor-pointer bg-neon mix-blend-multiply hover:bg-transparent transition duration-150' />
+      <div className='absolute w-full h-full rounded-lg bg-neon mix-blend-multiply hover:bg-transparent transition duration-150' />
     </div>
   )
 }
