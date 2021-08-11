@@ -1,12 +1,13 @@
 import Link from 'next/link';
-
+import Logo from './Logo';
 
 function Header() {
   return (
     <header className='bg-base fixed h-20 w-full flex items-center justify-between px-10 py-5 shadow-lg'>
       <div className='flex-grow'>
         {/* Title */}
-        <h1 className='font-medium'>Brotahman</h1>
+        {/* <h1 className='font-medium'>Brotahman</h1> */}
+        <Logo />
       </div>
       <div>
         <nav>
@@ -16,16 +17,19 @@ function Header() {
                 <a className='navLink'>&lt;Home /&gt;</a>
               </Link>
             </li>
+
             <li>
               <Link href="#About">
                 <a className='navLink'>&lt;About /&gt;</a>
               </Link>
             </li>
+            
             <li>
               <Link href="#Projects">
                 <a className='navLink'>&lt;Projects /&gt;</a>
               </Link>
             </li>
+            
             <li>
               <Link href="#Contact">
                 <a className='navLink'>&lt;Contact /&gt;</a>
