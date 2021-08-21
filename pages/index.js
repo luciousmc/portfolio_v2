@@ -4,6 +4,7 @@ import HeroSection from '@components/HeroSection';
 import Section from '@components/Section';
 import SocialBox from '@components/SocialBox';
 import AboutSection from '@components/AboutSection';
+import SideMenu from '@components/SideMenu';
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       </Head>
       
       <Header />
+
+      <SideMenu />
 
       <main className='max-w-7xl px-8 mx-auto'>
 
