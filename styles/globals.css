@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;500;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +7,8 @@
 @layer base {
   body {
     @apply bg-base text-white font-mono;
-    font-family: sans-serif;
+    font-family: 'Yantramanav', sans-serif;
+    color: hsl(225, 14%, 75%);
   }
 }
 
@@ -15,7 +18,7 @@
   }
 
   .social-icon {
-    @apply m-3 w-9 h-9 cursor-pointer hover:text-neon;
+    @apply m-3 w-8 h-8 cursor-pointer hover:text-neon;
   }
 
   .logo {

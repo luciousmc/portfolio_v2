@@ -1,12 +1,12 @@
 function HeroSection() {
   return (
-    <section className='h-screen flex items-center pl-20'>
+    <section className='h-screen flex items-center pl-10'>
       <div className='space-y-5'>
-        <p className='text-neon md:text-lg'>
+        <p className='text-neon md:text-2xl'>
           <span>Hello World</span>, I am
         </p>
-        <h1 className='text-7xl md:text-8xl text-slate-lightest'>Marlon <span className='text-accent'>Clay</span></h1>
-        <p className='text-3xl md:text-4xl text-slate'>I build things on the Web...</p>
+        <h1 className='text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem] text-slate-lightest'>Marlon <span className='text-accent'>Clay</span></h1>
+        <p className='text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-slate'>I build things on the Web...</p>
       </div>
     </section>
   )

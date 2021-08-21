@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function ProfileImage() {
   return (
-    <div className='relative w-52 h-52 hover:scale-105 hover:-translate-x-2 hover:-translate-y-2 transition duration-200 rounded-lg'>
+    <div className='relative w-52 h-52 mb-10 hover:scale-105 hover:-translate-x-2 hover:-translate-y-2 transition duration-200 rounded-lg'>
       <Image
         src='/images/profile.jpg'
         layout='fill'

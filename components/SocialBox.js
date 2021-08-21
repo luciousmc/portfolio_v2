@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 function SocialBox() {
   return (
-    <aside className='hidden md:flex flex-col fixed left-20 bottom-5'>
+    <aside className='hidden md:flex flex-col items-center fixed left-14 bottom-0'>
       <Link href="https://www.facebook.com/marlon.lucious/">
         <Facebook className='social-icon' />
       </Link>

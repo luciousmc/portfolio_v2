@@ -2,12 +2,12 @@ const { default: ProfileImage } = require("./ProfileImage");
 
 function AboutSection() {
   return (
-    <div className='px-5 flex'>
-      <div className='w-1/4 pt-10'>
+    <div className='flex flex-col md:flex-row sm:px-5'>
+      <div className='w-1/2 md:w-1/4 pt-10 mx-auto'>
         {/* Profile Image */}
         <ProfileImage />
       </div>
-      <div className='space-y-4 text-justify pl-10'>
+      <div className='space-y-4 text-justify pl-10 text-2xl font-light'>
         {/* About content */}
         <p>
           Hello! My name is Marlon Clay. I first got introduced to programming when I was 12 years old. America Online and dial-up modems were the thing. My curious little mind had stumbled upon the words, "Build your own homepage", or something similar. I then spent the next few hours tinkering with HTML and was able to put together a website with a bright red background and a blue link to my email address. I felt very accomplised that day no matter how hard on the eyes it was to look at that page.
