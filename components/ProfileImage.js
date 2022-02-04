@@ -10,7 +10,7 @@ function ProfileImage() {
       />
       <div className='absolute w-full h-full rounded-lg bg-neon mix-blend-multiply hover:bg-transparent transition duration-150' />
     </div>
-  )
+  );
 }
 
 export default ProfileImage;
