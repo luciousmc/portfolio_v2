@@ -18,7 +18,7 @@
 
 @layer components {
   .navLink {
-    @apply text-white transition-colors duration-100 hover:text-neon;
+    @apply transition-colors duration-100 hover:text-neon cursor-pointer;
   }
 
   .social-icon {
