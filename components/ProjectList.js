@@ -2,6 +2,7 @@ import { ExternalLinkIcon } from '@heroicons/react/outline';
 import { Github } from '@icons-pack/react-simple-icons';
 import projects from '../details/projects';
 import { useRouter } from 'next/router';
+
 function ProjectList() {
   const router = useRouter();
   return (

@@ -21,9 +21,9 @@ export default [
     description:
       "A chat app clone created to learn and practice the new Firebase v9. The app utilizes Firebase's Auth, Firestore and Storage services",
     tech: ['React', 'Redux', 'Firebase', 'Styled Components'],
-    live_link: '#',
+    live_link: 'https://r-slack-clone.web.app',
     repo_link: 'https://github.com/luciousmc/r-slack-clone',
-    project_img: '',
+    project_img: '/images/projects/slack-preview.png',
   },
 ];
 
