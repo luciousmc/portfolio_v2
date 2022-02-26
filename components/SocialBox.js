@@ -1,10 +1,5 @@
-import {
-  Facebook,
-  Linkedin,
-  Instagram,
-  Twitter,
-} from '@icons-pack/react-simple-icons';
-import { MailIcon } from '@heroicons/react/solid';
+import { Facebook, Linkedin, Twitter } from '@icons-pack/react-simple-icons';
+import { MailIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 
 function SocialBox() {

@@ -13,14 +13,12 @@ export default function Home() {
 
   useEffect(() => {
     const handleBodyClick = (e) => {
-      if (!isMenuOpen) return;
-
-      setIsMenuOpen(false);
+      if (isMenuOpen) setIsMenuOpen(false);
     };
     window.addEventListener('click', handleBodyClick);
 
     return () => window.removeEventListener('click', handleBodyClick);
-  }, []);
+  }, [isMenuOpen]);
 
   return (
     <>
