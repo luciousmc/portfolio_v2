@@ -1,7 +1,22 @@
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 function SideMenu({ isMenuOpen, setIsMenuOpen }) {
+  const overlayRef = useRef(null);
+
+  useEffect(() => {
+    const handleOverlayClick = () => {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+    overlayRef.current.addEventListener('click', handleOverlayClick);
+
+    return () =>
+      overlayRef.current.removeEventListener('click', handleOverlayClick);
+  }, [isMenuOpen]);
+
   return (
     <>
       <div className='fixed top-0 right-0 md:hidden z-[100]'>
@@ -17,6 +32,7 @@ function SideMenu({ isMenuOpen, setIsMenuOpen }) {
         </button>
       </div>
       <div
+        ref={overlayRef}
         className={`fixed ${
           !isMenuOpen ? 'hidden' : 'z-50 w-full h-full bg-[rgba(0,0,0,.5)]'
         }`}

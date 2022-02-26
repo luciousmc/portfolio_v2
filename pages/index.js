@@ -11,15 +11,6 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleBodyClick = (e) => {
-      if (isMenuOpen) setIsMenuOpen(false);
-    };
-    window.addEventListener('click', handleBodyClick);
-
-    return () => window.removeEventListener('click', handleBodyClick);
-  }, [isMenuOpen]);
-
   return (
     <>
       <Head>
