@@ -2,13 +2,13 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
-function SideMenu({ isMenuOpen, setIsMenuOpen }) {
+function SideMenu({ isMenuOpen, setIsMenuOpen, closeMenu }) {
   const overlayRef = useRef(null);
 
   useEffect(() => {
     const handleOverlayClick = () => {
       if (isMenuOpen) {
-        setIsMenuOpen(false);
+        closeMenu();
       }
     };
     overlayRef.current.addEventListener('click', handleOverlayClick);
@@ -46,25 +46,33 @@ function SideMenu({ isMenuOpen, setIsMenuOpen }) {
           <ul>
             <li className=''>
               <Link href='#top'>
-                <a className='mobileNavLink'>&lt;Home /&gt;</a>
+                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                  &lt;Home /&gt;
+                </a>
               </Link>
             </li>
 
             <li>
               <Link href='#About'>
-                <a className='mobileNavLink'>&lt;About /&gt;</a>
+                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                  &lt;About /&gt;
+                </a>
               </Link>
             </li>
 
             <li>
               <Link href='#Projects'>
-                <a className='mobileNavLink'>&lt;Projects /&gt;</a>
+                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                  &lt;Projects /&gt;
+                </a>
               </Link>
             </li>
 
             <li>
               <Link href='#Contact'>
-                <a className='mobileNavLink'>&lt;Contact /&gt;</a>
+                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                  &lt;Contact /&gt;
+                </a>
               </Link>
             </li>
           </ul>

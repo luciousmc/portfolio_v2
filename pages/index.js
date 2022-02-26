@@ -11,6 +11,10 @@ import { useState } from 'react';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <Head>
@@ -21,7 +25,11 @@ export default function Home() {
 
       <Header />
 
-      <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <SideMenu
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        closeMenu={closeMenu}
+      />
 
       <main className='max-w-7xl px-8 mx-auto'>
         <div className='flex flex-col w-[85%] mx-auto'>
