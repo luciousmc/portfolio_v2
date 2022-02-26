@@ -6,7 +6,6 @@ import SocialBox from '@components/SocialBox';
 import AboutSection from '@components/AboutSection';
 import SideMenu from '@components/SideMenu';
 import FeaturedProject from '@components/FeaturedProject';
-import { useState } from 'react';
 
 export default function Home() {
   return (
