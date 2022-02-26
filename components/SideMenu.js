@@ -1,9 +1,14 @@
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-function SideMenu({ isMenuOpen, setIsMenuOpen, closeMenu }) {
+function SideMenu() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const overlayRef = useRef(null);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleOverlayClick = () => {
@@ -11,11 +16,15 @@ function SideMenu({ isMenuOpen, setIsMenuOpen, closeMenu }) {
         closeMenu();
       }
     };
-    overlayRef.current.addEventListener('click', handleOverlayClick);
+    overlayRef.current?.addEventListener('click', handleOverlayClick);
 
     return () =>
       overlayRef.current.removeEventListener('click', handleOverlayClick);
   }, [isMenuOpen]);
+
+  const handleNavLinkClick = () => {
+    closeMenu();
+  };
 
   return (
     <>
@@ -46,7 +55,7 @@ function SideMenu({ isMenuOpen, setIsMenuOpen, closeMenu }) {
           <ul>
             <li className=''>
               <Link href='#top'>
-                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                <a onClick={handleNavLinkClick} className='mobileNavLink'>
                   &lt;Home /&gt;
                 </a>
               </Link>
@@ -54,7 +63,7 @@ function SideMenu({ isMenuOpen, setIsMenuOpen, closeMenu }) {
 
             <li>
               <Link href='#About'>
-                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                <a onClick={handleNavLinkClick} className='mobileNavLink'>
                   &lt;About /&gt;
                 </a>
               </Link>
@@ -62,7 +71,7 @@ function SideMenu({ isMenuOpen, setIsMenuOpen, closeMenu }) {
 
             <li>
               <Link href='#Projects'>
-                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                <a onClick={handleNavLinkClick} className='mobileNavLink'>
                   &lt;Projects /&gt;
                 </a>
               </Link>
@@ -70,7 +79,7 @@ function SideMenu({ isMenuOpen, setIsMenuOpen, closeMenu }) {
 
             <li>
               <Link href='#Contact'>
-                <a onClick={() => closeMenu()} className='mobileNavLink'>
+                <a onClick={handleNavLinkClick} className='mobileNavLink'>
                   &lt;Contact /&gt;
                 </a>
               </Link>
