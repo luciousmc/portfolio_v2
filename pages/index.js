@@ -6,7 +6,7 @@ import SocialBox from '@components/SocialBox';
 import AboutSection from '@components/AboutSection';
 import SideMenu from '@components/SideMenu';
 import FeaturedProject from '@components/FeaturedProject';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
