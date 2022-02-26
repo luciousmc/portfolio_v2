@@ -9,7 +9,7 @@ function FeaturedProject() {
     <div>
       {featured.map(
         ({ name, description, repo_link, live_link, project_img, tech }) => (
-          <div className='relative max-w-600px shadow-lg mt-5 mb-12'>
+          <div key={name} className='relative max-w-600px shadow-lg mt-5 mb-12'>
             <div className='absolute opacity-[4%] top-0 left-0 right-0 bottom-0 z-[-1]'>
               <img
                 className='w-full h-full object-cover object-left-top'

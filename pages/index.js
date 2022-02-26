@@ -6,8 +6,22 @@ import SocialBox from '@components/SocialBox';
 import AboutSection from '@components/AboutSection';
 import SideMenu from '@components/SideMenu';
 import FeaturedProject from '@components/FeaturedProject';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleBodyClick = (e) => {
+      if (!isMenuOpen) return;
+
+      setIsMenuOpen(false);
+    };
+    window.addEventListener('click', handleBodyClick);
+
+    return () => window.removeEventListener('click', handleBodyClick);
+  }, []);
+
   return (
     <>
       <Head>
@@ -18,7 +32,7 @@ export default function Home() {
 
       <Header />
 
-      <SideMenu />
+      <SideMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       <main className='max-w-7xl px-8 mx-auto'>
         <div className='flex flex-col w-[85%] mx-auto'>

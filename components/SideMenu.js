@@ -1,9 +1,7 @@
-import { MenuIcon } from '@heroicons/react/outline';
-import { useState } from 'react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import Link from 'next/link';
 
-function SideMenu() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+function SideMenu({ isMenuOpen, setIsMenuOpen }) {
   return (
     <>
       <div className='fixed top-0 right-0 md:hidden z-[100]'>
@@ -11,7 +9,11 @@ function SideMenu() {
           onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
           className='p-4 outline-none border-0'
         >
-          <MenuIcon className='h-10 text-slate' />
+          {isMenuOpen ? (
+            <XIcon className='text-slate' />
+          ) : (
+            <MenuIcon className='h-10 text-slate' />
+          )}
         </button>
       </div>
       <div
@@ -22,14 +24,33 @@ function SideMenu() {
       <menu
         className={`fixed right-0 z-[60] ${
           !isMenuOpen ? 'w-0 duration-100' : 'w-64'
-        } pt-28 h-full flex flex-col items-end bg-base my-0 transition-width duration-200 linear`}
+        } pt-28 h-full bg-base my-0 transition-width duration-200 linear`}
       >
-        <nav className='text-center w-full'>
+        <nav className='text-center w-full h-full'>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li className=''>
+              <Link href='#top'>
+                <a className='mobileNavLink'>&lt;Home /&gt;</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href='#About'>
+                <a className='mobileNavLink'>&lt;About /&gt;</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href='#Projects'>
+                <a className='mobileNavLink'>&lt;Projects /&gt;</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href='#Contact'>
+                <a className='mobileNavLink'>&lt;Contact /&gt;</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </menu>
