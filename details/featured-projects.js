@@ -1,3 +1,5 @@
+const IMG_PATH = '/images/projects';
+
 export default [
   {
     name: 'Sheynanigans Bakery',
@@ -5,7 +7,7 @@ export default [
     tech: ['React', 'Express', 'Express Sessions', 'PostgreSQL', 'NodeJs'],
     live_link: 'http://sheynanigans.marlonclay.com',
     repo_link: 'http://github.com/luciousmc/sheynanigans-bakery',
-    project_img: '/images/projects/sheynanigans_preview.png',
+    project_img: `${IMG_PATH}/sheynanigans_preview.png`,
   },
   {
     name: 'My Hero Memory',
@@ -14,7 +16,7 @@ export default [
     tech: ['HTML5', 'CSS3', 'JavaScript', 'jQuery'],
     live_link: 'https://my-hero-memory.marlonclay.com',
     repo_link: 'https://github.com/luciousmc/my-hero-memory',
-    project_img: '/images/projects/my-hero-memory-preview.png',
+    project_img: `${IMG_PATH}/my-hero-memory-preview.png`,
   },
   {
     name: 'Slack Clone',
@@ -23,7 +25,7 @@ export default [
     tech: ['React', 'Redux', 'Firebase', 'Styled Components'],
     live_link: 'https://r-slack-clone.web.app',
     repo_link: 'https://github.com/luciousmc/r-slack-clone',
-    project_img: '/images/projects/slack-preview.png',
+    project_img: `${IMG_PATH}/slack-preview.png`,
   },
 ];
 

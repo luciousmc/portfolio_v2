@@ -9,20 +9,26 @@ function FeaturedProject() {
     <div>
       {featured.map(
         ({ name, description, repo_link, live_link, project_img, tech }) => (
-          <div key={name} className='relative max-w-600px shadow-lg mt-5 mb-12'>
-            <div className='absolute opacity-[4%] top-0 left-0 right-0 bottom-0 z-[-1]'>
+          <div
+            key={name}
+            className='relative max-w-[800px] shadow-lg mt-5 mb-12 m-auto'
+          >
+            <div className='absolute opacity-[10%] w-full h-full right-0 bottom-0 md:h-auto md:w-[40vw] md:bottom-0 z-[-1] cursor-pointer md:hover:filter md:brightness-50 md:hover:opacity-100 transition-opacity duration-200'>
               <img
-                className='w-full h-full object-cover object-left-top'
+                className='w-full h-full object-cover md:h-[90%] md:object-contain object-left-top'
                 src={project_img}
                 alt={`${name} Image`}
               />
+              <div className='hidden md:block md:absolute md:inset-0 md:bg-neon md:mix-blend-multiply md:hover:bg-transparent' />
             </div>
             <div className='px-10 py-20 z-50'>
-              <h3 className='text-accent'>Featured Project</h3>
-              <h4 className='text-3xl tracking-wider hover:text-neon'>
+              <p className='text-accent'>Featured Project</p>
+              <h3 className='text-3xl tracking-wider hover:text-neon'>
                 <Link href={live_link}>{name}</Link>
-              </h4>
-              <p className='mt-7 mb-4 text-xl font-light'>{description}</p>
+              </h3>
+              <p className='mt-7 mb-4 text-xl font-light md:p-5 md:bg-gray-700 md:shadow-md md:max-w-md md:rounded-sm'>
+                {description}
+              </p>
               <ul className='flex gap-4 flex-wrap'>
                 {tech.map((item, i) => (
                   <li key={i}>{item}</li>
