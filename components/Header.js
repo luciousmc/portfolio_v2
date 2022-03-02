@@ -5,35 +5,34 @@ function Header() {
   return (
     <header className='bg-base fixed z-50 h-20 w-full flex items-center justify-between px-10 py-5 shadow-lg'>
       <div className='flex-grow'>
-        {/* Title */}
         <Logo />
       </div>
       <div>
         <nav>
           <ul className='hidden md:flex mr-5 space-x-8'>
             <li>
-              <Link href="#top">
+              <Link href='#top'>
                 <a className='navLink'>&lt;Home /&gt;</a>
               </Link>
             </li>
 
             <li>
-              <Link href="#About">
+              <Link href='#About'>
                 <a className='navLink'>&lt;About /&gt;</a>
               </Link>
             </li>
-            
+
             <li>
-              <Link href="#Projects">
+              <Link href='#Projects'>
                 <a className='navLink'>&lt;Projects /&gt;</a>
               </Link>
             </li>
-            
+
             <li>
-              <Link href="#Contact">
+              <Link href='#Contact'>
                 <a className='navLink'>&lt;Contact /&gt;</a>
               </Link>
-            </li>            
+            </li>
           </ul>
         </nav>
       </div>
@@ -45,7 +44,7 @@ function Header() {
         </Link>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

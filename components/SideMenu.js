@@ -34,9 +34,9 @@ function SideMenu() {
           className='p-4 outline-none border-0'
         >
           {isMenuOpen ? (
-            <XIcon className='text-slate' />
+            <XIcon className='text-neon' />
           ) : (
-            <MenuIcon className='h-10 text-slate' />
+            <MenuIcon className='h-10 text-neon' />
           )}
         </button>
       </div>
