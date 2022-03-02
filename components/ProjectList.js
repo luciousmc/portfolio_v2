@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 function ProjectList() {
   const router = useRouter();
   return (
-    <div className='flex gap-3 justify-center'>
+    <div className='flex flex-wrap md:flex-nowrap gap-3 justify-center'>
       {projects.map(({ name, description, tech, live_link, repo_link }) => (
         <div
           key={name}
