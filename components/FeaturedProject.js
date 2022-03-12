@@ -36,10 +36,10 @@ function FeaturedProject() {
                 ))}
               </ul>
               <div className='flex items-center space-x-3 mt-8'>
-                <a href={repo_link} target='_blank'>
+                <a href={repo_link} target='_blank' rel='noreferrer'>
                   <Github className='w-10 navLink' />
                 </a>
-                <a href={live_link} target='_blank'>
+                <a href={live_link} target='_blank' rel='noreferrer'>
                   <ExternalLinkIcon className='w-8 navLink' />
                 </a>
               </div>
