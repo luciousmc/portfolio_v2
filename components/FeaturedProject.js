@@ -1,4 +1,5 @@
 import Link from 'next/dist/client/link';
+import Image from 'next/dist/client/image';
 import { Github } from '@icons-pack/react-simple-icons';
 import { ExternalLinkIcon } from '@heroicons/react/outline';
 import featured from '../details/featured-projects';
@@ -14,7 +15,7 @@ function FeaturedProject() {
             className='relative max-w-[800px] shadow-lg mt-5 mb-12 m-auto group'
           >
             <div className='absolute opacity-[10%] w-full h-full right-0 bottom-0 md:h-auto md:w-[40vw] md:bottom-0 z-[-1] cursor-pointer md:hover:filter md:brightness-50 md:group-hover:opacity-80 md:group-hover:-translate-y-3 transition-all duration-500'>
-              <img
+              <Image
                 className='w-full h-full object-cover md:h-[90%] md:object-contain object-left-top'
                 src={project_img}
                 alt={`${name} Image`}
