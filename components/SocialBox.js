@@ -13,7 +13,7 @@ function SocialBox() {
         <Linkedin className='social-icon' />
       </Link>
 
-      <Link href='#'>
+      <Link href='https://twitter.com/brotahman'>
         <Twitter className='social-icon' />
       </Link>
 
