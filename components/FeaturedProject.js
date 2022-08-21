@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
+
 import Link from 'next/dist/client/link';
-import Image from 'next/dist/client/image';
+import Image from 'next/image';
 import { Github } from '@icons-pack/react-simple-icons';
 import { ExternalLinkIcon } from '@heroicons/react/outline';
 import featured from '../details/featured-projects';
@@ -15,14 +17,11 @@ function FeaturedProject() {
             className='relative max-w-[800px] shadow-lg mt-5 mb-12 m-auto group'
           >
             <div className='absolute opacity-[10%] w-full h-full right-0 bottom-0 md:h-auto md:w-[40vw] md:bottom-0 z-[-1] cursor-pointer md:hover:filter md:brightness-50 md:group-hover:opacity-80 md:group-hover:origin-bottom-right md:group-hover:scale-110 transition-all duration-500'>
-              <picture>
-                <source srcSet={project_img} type='image/png' />
-                <img
-                  className='object-cover md:h-[90%] md:object-contain object-left-top'
-                  src={project_img}
-                  alt={`${name} Image`}
-                />
-              </picture>
+              <img
+                className='w-full h-full object-cover md:h-[90%] md:object-contain object-left-top'
+                src={project_img}
+                alt={`${name} Image`}
+              />
               <div className='hidden md:block md:absolute md:inset-0 md:bg-neon md:mix-blend-multiply md:group-hover:bg-transparent' />
             </div>
             <div className='px-10 py-14 z-50'>
