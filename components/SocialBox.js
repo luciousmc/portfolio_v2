@@ -5,21 +5,21 @@ import Link from 'next/link';
 function SocialBox() {
   return (
     <aside className='hidden md:flex flex-col items-center fixed left-8 bottom-0'>
-      <Link href='https://www.facebook.com/marlon.lucious/'>
+      <a href='https://www.facebook.com/marlon.lucious/' target='_blank' rel='noreferrer'>
         <Facebook className='social-icon' />
-      </Link>
+      </a>
 
-      <Link href='https://www.linkedin.com/in/marlonclay/'>
+      <a href='https://www.linkedin.com/in/marlonclay/' target='_blank' rel='noreferrer'>
         <Linkedin className='social-icon' />
-      </Link>
+      </a>
 
-      <Link href='https://twitter.com/brotahman'>
+      <a href='https://twitter.com/brotahman' target='_blank' rel='noreferrer'>
         <Twitter className='social-icon' />
-      </Link>
+      </a>
 
-      <Link href='mailto:luciousmc@icloud.com'>
+      <a href='mailto:luciousmc@icloud.com' target='_blank' rel='noreferrer'>
         <MailIcon className='social-icon' />
-      </Link>
+      </a>
 
       <div className='border-l border-r border-neon h-24 w-0 mx-auto bg-neon' />
     </aside>
