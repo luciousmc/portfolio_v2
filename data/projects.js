@@ -33,7 +33,7 @@ export const other = [
   {
     name: 'Together',
     description:
-      "Together is a new app designed for 100devs. Together is a group calendar for public events, so you can see what's going on in your community. We're making it easier to find out about the events that are happening in Discord and let you iknow how much fun they'll be!",
+      "Together is a group calendar for public events by the 100devs online community.",
     tech: ['React', 'TailwindCSS', 'Express', 'MongoDB'],
     live_link: 'https://together.cyclic.app',
     repo_link: 'https://github.com/Caleb-Cohen/Together',
