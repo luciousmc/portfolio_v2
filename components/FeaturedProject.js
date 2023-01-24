@@ -1,16 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Link from 'next/dist/client/link';
-import Image from 'next/image';
-import { Github } from '@icons-pack/react-simple-icons';
-import { ExternalLinkIcon } from '@heroicons/react/outline';
-import * as PROJECTS from '../data/projects';
-import ProjectList from './ProjectList';
+import { Github } from "@icons-pack/react-simple-icons";
+import { ExternalLinkIcon } from "@heroicons/react/outline";
+import { featured } from "../data/projects";
+import ProjectList from "./ProjectList";
 
 function FeaturedProject() {
   return (
     <div>
-      {PROJECTS.featured.map(
+      {featured.map(
         ({ name, description, repo_link, live_link, project_img, tech }) => (
           <div
             key={name}
@@ -27,7 +25,9 @@ function FeaturedProject() {
             <div className='px-10 py-14 z-50'>
               <p className='text-accent'>Featured Project</p>
               <h3 className='text-3xl tracking-wider hover:text-neon'>
-                <Link href={live_link}>{name}</Link>
+                <a href={live_link} target='_blank' rel='noreferrer'>
+                  {name}
+                </a>
               </h3>
               <p className='mt-7 mb-4 text-xl font-light md:p-5 md:bg-gray-700 md:shadow-md md:max-w-md md:rounded-sm'>
                 {description}
