@@ -1,14 +1,41 @@
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactSection() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const sendSucess = () => {
+    toast("Message Sent!", {
+      position: "bottom-right",
+      autoclose: 3000,
+      hideProgressBar: true,
+      draggable: false,
+      toastId: "notifyToast",
+      pauseOnHover: false,
+    });
+  };
+
+  const onSubmit = async ({ name, email, message }) => {
+    const params = { name, email, message };
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        params,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+    } catch (error) {
+      console.error(error.message);
+    }
+    reset();
+    sendSucess();
   };
 
   return (
@@ -20,7 +47,7 @@ function ContactSection() {
       </p>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className='flex flex-col space-y-5'
+        className='flex flex-col space-y-7'
       >
         <div className='flex flex-col'>
           <label htmlFor='name'>Name:</label>
@@ -59,7 +86,7 @@ function ContactSection() {
           <textarea
             {...register("message", { required: "Message is required" })}
             cols='30'
-            rows='10'
+            rows='5'
           ></textarea>
           {errors.message && (
             <p className='text-red-500' role='alert'>
@@ -70,6 +97,10 @@ function ContactSection() {
 
         <input type='submit' value='Send' className='cursor-pointer' />
       </form>
+      <ToastContainer
+        toastClassName='!bg-gray-700 shadow-md'
+        bodyClassName='text-neon'
+      />
     </div>
   );
 }
