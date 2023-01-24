@@ -6,6 +6,7 @@ import SocialBox from '@components/SocialBox';
 import AboutSection from '@components/AboutSection';
 import SideMenu from '@components/SideMenu';
 import FeaturedProject from '@components/FeaturedProject';
+import ContactSection from '@components/ContactSection';
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
 
       <SideMenu />
 
-      <main className='max-w-7xl px-8 mx-auto'>
-        <div className='flex flex-col w-[85%] mx-auto'>
+      <main className='max-w-7xl pb-14 md:px-8 mx-auto'>
+        <div className='flex flex-col w-[95%] md:w-[85%] mx-auto'>
           <HeroSection />
 
           <SocialBox />
@@ -35,7 +36,7 @@ export default function Home() {
           </Section>
 
           <Section id='Contact' title='Contact'>
-            This is the contact section
+            <ContactSection />
           </Section>
         </div>
       </main>
