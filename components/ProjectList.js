@@ -1,13 +1,13 @@
-import { ExternalLinkIcon } from '@heroicons/react/outline';
-import { Github } from '@icons-pack/react-simple-icons';
-import  * as PROJECTS from '../data/projects';
-import { useRouter } from 'next/router';
+import { ExternalLinkIcon } from "@heroicons/react/outline";
+import { Github } from "@icons-pack/react-simple-icons";
+import { projects } from "../data/projects";
+import { useRouter } from "next/router";
 
 function ProjectList() {
   const router = useRouter();
   return (
     <div className='flex flex-wrap md:flex-nowrap gap-3 justify-center'>
-      {PROJECTS.other.map(({ name, description, tech, live_link, repo_link }) => (
+      {projects.map(({ name, description, tech, live_link, repo_link }) => (
         <div
           key={name}
           onClick={() => router.push(live_link)}
