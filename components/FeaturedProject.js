@@ -4,17 +4,17 @@ import Link from 'next/dist/client/link';
 import Image from 'next/image';
 import { Github } from '@icons-pack/react-simple-icons';
 import { ExternalLinkIcon } from '@heroicons/react/outline';
-import featured from '../details/featured-projects';
+import * as PROJECTS from '../data/projects';
 import ProjectList from './ProjectList';
 
 function FeaturedProject() {
   return (
     <div>
-      {featured.map(
+      {PROJECTS.featured.map(
         ({ name, description, repo_link, live_link, project_img, tech }) => (
           <div
             key={name}
-            className='relative max-w-[800px] shadow-lg mt-5 mb-12 m-auto group'
+            className='relative max-w-[800px] shadow-lg mt-5 mb-8 m-auto group'
           >
             <div className='absolute opacity-[10%] w-full h-full right-0 bottom-0 md:h-auto md:w-[40vw] md:bottom-0 z-[-1] cursor-pointer md:hover:filter md:brightness-50 md:group-hover:opacity-80 md:group-hover:origin-bottom-right md:group-hover:scale-110 transition-all duration-500'>
               <img
