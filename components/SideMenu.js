@@ -1,4 +1,5 @@
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MailIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Facebook, Linkedin, Twitter } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -47,9 +48,9 @@ function SideMenu() {
       <menu
         className={`fixed w-64 z-[60] right-0 transform transition-transform ${
           !isMenuOpen && "translate-x-full duration-200"
-        } pt-28 pl-0 h-full bg-base my-0`}
+        } pt-28 pb-10 pl-0 h-full bg-base my-0`}
       >
-        <nav className='text-center w-full h-full'>
+        <nav className='flex flex-col justify-between text-center w-full h-full'>
           <ul className='space-y-3'>
             <li className=''>
               <Link href='#top'>
@@ -83,6 +84,53 @@ function SideMenu() {
               </Link>
             </li>
           </ul>
+
+          <div className='flex flex-wrap justify-center'>
+            <div className='flex items-center gap-3 px-5 w-full'>
+              <div className='h-1 w-full bg-accent' />
+              <h3 className='text-xl'>Socials</h3>
+              <div className='h-1 w-full bg-accent' />
+            </div>
+
+            <ul className='flex'>
+              <li>
+                <a
+                  href='https://www.facebook.com/marlon.lucious/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <Facebook className='social-icon' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.linkedin.com/in/marlonclay/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <Linkedin className='social-icon' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://twitter.com/brotahman'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <Twitter className='social-icon' />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='mailto:luciousmc@icloud.com'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <MailIcon className='social-icon' />
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </menu>
     </>
