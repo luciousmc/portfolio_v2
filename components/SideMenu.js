@@ -2,6 +2,7 @@ import { MailIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Facebook, Linkedin, Twitter } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { RESUME_URL } from "../data/resume";
 
 function SideMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +51,7 @@ function SideMenu() {
           !isMenuOpen && "translate-x-full duration-200"
         } pt-28 pb-10 pl-0 h-full bg-base my-0`}
       >
-        <nav className='flex flex-col justify-between text-center w-full h-full'>
+        <nav className='flex flex-col text-center justify-evenly w-full h-full'>
           <ul className='space-y-3'>
             <li className=''>
               <Link href='#top'>
@@ -84,8 +85,19 @@ function SideMenu() {
               </Link>
             </li>
           </ul>
+          <div className='my-10'>
+            <Link href={RESUME_URL}>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                className='text-neon border-2 py-2 px-3 border-neon rounded-md transition-colors duration-300 hover:bg-neon-tint'
+              >
+                Download Resume
+              </a>
+            </Link>
+          </div>
 
-          <div className='flex flex-wrap justify-center'>
+          <div className='inline-flex flex-wrap justify-center justify-self-end'>
             <div className='flex items-center gap-3 px-5 w-full'>
               <div className='h-1 w-full bg-accent' />
               <h3 className='text-xl'>Socials</h3>

@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import Logo from './Logo';
+import Link from "next/link";
+import Logo from "./Logo";
+import { RESUME_URL } from "../data/resume";
 
 function Header() {
   return (
@@ -37,8 +38,12 @@ function Header() {
         </nav>
       </div>
       <div>
-        <Link href='#'>
-          <a className='hidden md:inline text-neon border-2 py-2 px-3 border-neon rounded-md transition-colors duration-300 hover:bg-neon-tint'>
+        <Link href={RESUME_URL}>
+          <a
+            target='_blank'
+            rel='noreferrer'
+            className='hidden md:inline text-neon border-2 py-2 px-3 border-neon rounded-md transition-colors duration-300 hover:bg-neon-tint'
+          >
             Resume
           </a>
         </Link>
