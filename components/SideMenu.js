@@ -46,8 +46,8 @@ function SideMenu() {
       ></div>
       <menu
         className={`fixed w-64 z-[60] right-0 transform transition-transform ${
-          !isMenuOpen && "translate-x-full duration-100"
-        } pt-28 h-full bg-base my-0 transition-width duration-200 linear`}
+          !isMenuOpen && "translate-x-full duration-200"
+        } pt-28 pl-0 h-full bg-base my-0`}
       >
         <nav className='text-center w-full h-full'>
           <ul className='space-y-3'>
