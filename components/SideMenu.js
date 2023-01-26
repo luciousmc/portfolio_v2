@@ -12,15 +12,15 @@ function SideMenu() {
   };
 
   useEffect(() => {
+    const overlay = overlayRef.current;
     const handleOverlayClick = () => {
       if (isMenuOpen) {
         closeMenu();
       }
     };
-    overlayRef.current?.addEventListener("click", handleOverlayClick);
+    overlay.addEventListener("click", handleOverlayClick);
 
-    return () =>
-      overlayRef.current.removeEventListener("click", handleOverlayClick);
+    return () => overlay.removeEventListener("click", handleOverlayClick);
   }, [isMenuOpen]);
 
   const handleNavLinkClick = () => {
