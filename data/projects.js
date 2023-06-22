@@ -44,7 +44,7 @@ export const projects = [
     description:
       "A copy of the popular Amazon website. It features the ability to add items to the cart and purchase them.",
     tech: ["NextJs", "Next Auth", "TailwindCSS", "Stripe"],
-    live_link: "https://r-amazon.marlonclay.com",
+    live_link: "https://amazon-clone.marlonclay.com",
     repo_link: "https://github.com/luciousmc/r-amazon",
     project_img: `${IMG_PATH}/amazon_preview.png`,
   },
