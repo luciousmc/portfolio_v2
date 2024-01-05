@@ -12,20 +12,20 @@ export const featured = [
   {
     name: "My Hero Memory",
     description:
-      "A memory match game modeled after the popular anime My Hero Academia.",
+      "A memory match game inspired from the popular anime My Hero Academia.",
     tech: ["HTML5", "CSS3", "JavaScript", "jQuery"],
     live_link: "https://my-hero-memory.marlonclay.com",
     repo_link: "https://github.com/luciousmc/my-hero-memory",
     project_img: `${IMG_PATH}/my-hero-memory-preview.png`,
   },
   {
-    name: "Slack Clone",
+    name: "airbnb Copy",
     description:
-      "A chat app clone created to learn and practice the new Firebase v9. The app utilizes Firebase's Auth, Firestore and Storage services",
-    tech: ["React", "Redux", "Firebase", "Styled Components"],
-    live_link: "https://r-slack-clone.web.app",
-    repo_link: "https://github.com/luciousmc/r-slack-clone",
-    project_img: `${IMG_PATH}/slack-preview.png`,
+      "A copy of the airbnb website UI. Integrating SSR for better UX.",
+    tech: ["NextJs", "React", "Mapbox", "TailwindCSS"],
+    live_link: "https://airbb-marz.vercel.app/",
+    repo_link: "https://github.com/luciousmc/airbb-copy",
+    project_img: `${IMG_PATH}/airbnb_preview.png`,
   },
 ];
 
@@ -38,6 +38,15 @@ export const projects = [
     live_link: "https://together.cyclic.app",
     repo_link: "https://github.com/Caleb-Cohen/Together",
     project_img: ``,
+  },
+  {
+    name: "Slack Clone",
+    description:
+      "A chat app clone created to learn and practice the new Firebase v9. The app utilizes Firebase's Auth, Firestore and Storage services",
+    tech: ["React", "Redux", "Firebase", "Styled Components"],
+    live_link: "https://r-slack-clone.web.app",
+    repo_link: "https://github.com/luciousmc/r-slack-clone",
+    project_img: `${IMG_PATH}/slack-preview.png`,
   },
   {
     name: "Amazon Clone",
