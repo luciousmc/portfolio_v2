@@ -8,9 +8,7 @@ function HeroSection() {
         <h1 className='text-7xl md:text-8xl text-slate-lightest'>
           Marlon <span className='text-accent'>Clay</span>
         </h1>
-        <p className='text-3xl md:text-5xl text-slate'>
-          I build things on the Web...
-        </p>
+        <p className='text-2xl md:text-4xl text-slate'>Software Engineer</p>
       </div>
     </section>
   );
