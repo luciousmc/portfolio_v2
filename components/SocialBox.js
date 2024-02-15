@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function SocialBox() {
   return (
-    <aside className='hidden md:block fixed left-8 bottom-0'>
+    <aside className='hidden md:block fixed bottom-0'>
       <ul className='flex flex-col items-center gap-2'>
         <li>
           <a
