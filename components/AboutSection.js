@@ -1,4 +1,4 @@
-const { default: ProfileImage } = require('./ProfileImage');
+const { default: ProfileImage } = require("./ProfileImage");
 
 function AboutSection() {
   return (
@@ -16,7 +16,7 @@ function AboutSection() {
           your own homepage&quot;, or something similar. I then spent the next
           few hours tinkering with HTML and was able to put together a website
           with a bright red background and a blue link to my email address. I
-          felt very accomplised that day no matter how hard on the eyes it was
+          felt very accomplished that day no matter how hard on the eyes it was
           to look at that page.
         </p>
         <p>
